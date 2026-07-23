@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SpeakUp Academy | Aprenda inglês. Transforme a sua vida.</title>
+
+<meta name="description" content="SpeakUp Academy - Academia moderna de inglês. Faça gratuitamente o Proficiency Project e descubra o seu nível de inglês.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="icon" href="images/favicon.png">
+
+</head>
+
+<body>
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header id="header">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.png" alt="SpeakUp Academy">
+
+</a>
+
+</div>
+
+<nav id="menu">
+
+<ul>
+
+<li><a href="#home">Início</a></li>
+
+<li><a href="#about">Sobre</a></li>
+
+<li><a href="#courses">Cursos</a></li>
+
+<li><a href="proficiency.html">Proficiency Project</a></li>
+
+<li><a href="#library">Biblioteca</a></li>
+
+<li><a href="#contact">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<div class="language">
+
+<button id="pt">🇲🇿 PT</button>
+
+<button id="en">🇬🇧 EN</button>
+
+</div>
+
+<a href="proficiency.html" class="btn-header">
+
+Fazer Teste
+
+</a>
+
+<div class="menu-toggle">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-left">
+
+<span class="tag">
+
+A Academia de Inglês do Futuro
+
+</span>
+
+<h1>
+
+Aprenda Inglês.
+
+<span>Transforme a sua Vida.</span>
+
+</h1>
+
+<p>
+
+A SpeakUp Academy combina ensino moderno, tecnologia e certificação internacional para ajudar estudantes e profissionais a dominar o inglês.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="proficiency.html" class="btn-primary">
+
+<i class="fas fa-graduation-cap"></i>
+
+Fazer Teste Gratuitamente
+
+</a>
+
+<a href="#courses" class="btn-secondary">
+
+<i class="fas fa-book-open"></i>
+
+Conhecer os Cursos
+
+</a>
+
+</div>
+
+<div class="hero-info">
+
+<div>
+
+<h2>1000+</h2>
+
+<p>Estudantes</p>
+
+</div>
+
+<div>
+
+<h2>6</h2>
+
+<p>Níveis CEFR</p>
+
+</div>
+
+<div>
+
+<h2>24/7</h2>
+
+<p>Biblioteca Digital</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/hero-students.png" alt="SpeakUp Academy">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+SCROLL DOWN
+========================= -->
+
+<div class="scroll-down">
+
+<i class="fas fa-angle-down"></i>
+
+</div>
+
+<!-- A PARTE 2 COMEÇA AQUI -->
+  <!-- =====================================
+SOBRE NÓS
+====================================== -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Quem Somos</span>
+
+<h2>Bem-vindo à SpeakUp Academy</h2>
+
+<p>
+Somos uma academia moderna dedicada ao ensino da língua inglesa, utilizando tecnologia, metodologias inovadoras e aprendizagem prática para preparar estudantes e profissionais para oportunidades nacionais e internacionais.
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<i class="fas fa-user-graduate"></i>
+
+<h3>Aprendizagem Moderna</h3>
+
+<p>
+Aulas interativas, materiais atualizados e foco na comunicação real.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<i class="fas fa-certificate"></i>
+
+<h3>Certificação</h3>
+
+<p>
+Cursos alinhados ao CEFR e preparação para certificações internacionais.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<i class="fas fa-laptop"></i>
+
+<h3>Ensino Flexível</h3>
+
+<p>
+Estude online, presencialmente ou através da nossa plataforma digital.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+SERVIÇOS
+====================================== -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Os Nossos Serviços</span>
+
+<h2>Tudo o que precisa para aprender inglês</h2>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<i class="fas fa-book-open"></i>
+
+<h3>Cursos de Inglês</h3>
+
+<p>
+Cursos completos do nível A1 ao C2 para crianças, jovens e adultos.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-clipboard-check"></i>
+
+<h3>Proficiency Project</h3>
+
+<p>
+Descubra gratuitamente o seu nível de inglês através do nosso teste online.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-book"></i>
+
+<h3>Biblioteca Digital</h3>
+
+<p>
+Gramática, vocabulário, exercícios, PDFs e materiais gratuitos.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-video"></i>
+
+<h3>Videoaulas</h3>
+
+<p>
+Aprenda ao seu ritmo com aulas organizadas por níveis.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+PROFICIENCY PROJECT
+====================================== -->
+
+<section class="pp">
+
+<div class="container">
+
+<div class="pp-content">
+
+<div class="pp-left">
+
+<span>Proficiency Project</span>
+
+<h2>Descubra o seu nível de inglês gratuitamente.</h2>
+
+<p>
+
+O Proficiency Project é o teste oficial da SpeakUp Academy. Em poucos minutos descobrirá o seu nível de acordo com o CEFR (A1–C2).
+
+</p>
+
+<ul>
+
+<li>✔ Resultado imediato</li>
+
+<li>✔ Baseado no CEFR</li>
+
+<li>✔ Gratuito</li>
+
+<li>✔ Recomendações de cursos</li>
+
+</ul>
+
+<a href="proficiency.html" class="btn-primary">
+
+Começar o Teste
+
+</a>
+
+</div>
+
+<div class="pp-right">
+
+<img src="images/proficiency.png" alt="Proficiency Project">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+CURSOS
+====================================== -->
+
+<section class="courses" id="courses">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Cursos</span>
+
+<h2>Escolha o seu nível</h2>
+
+</div>
+
+<div class="course-grid">
+
+<div class="course-card">
+
+<h3>A1</h3>
+
+<p>Iniciante</p>
+
+</div>
+
+<div class="course-card">
+
+<h3>A2</h3>
+
+<p>Elementar</p>
+
+</div>
+
+<div class="course-card">
+
+<h3>B1</h3>
+
+<p>Intermédio</p>
+
+</div>
+
+<div class="course-card">
+
+<h3>B2</h3>
+
+<p>Intermédio Superior</p>
+
+</div>
+
+<div class="course-card">
+
+<h3>C1</h3>
+
+<p>Avançado</p>
+
+</div>
+
+<div class="course-card">
+
+<h3>C2</h3>
+
+<p>Proficiência</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== FIM DA PARTE 2 ===== -->
+  <!-- =====================================
+ESTATÍSTICAS
+====================================== -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>1000+</h2>
+<p>Estudantes</p>
+</div>
+
+<div class="stat-card">
+<h2>500+</h2>
+<p>Testes Realizados</p>
+</div>
+
+<div class="stat-card">
+<h2>6</h2>
+<p>Níveis CEFR</p>
+</div>
+
+<div class="stat-card">
+<h2>95%</h2>
+<p>Satisfação</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+BIBLIOTECA
+====================================== -->
+
+<section class="library" id="library">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Biblioteca Digital</span>
+
+<h2>Aprenda gratuitamente</h2>
+
+<p>
+
+Aceda a materiais cuidadosamente preparados para desenvolver todas as competências da língua inglesa.
+
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<i class="fas fa-book"></i>
+
+<h3>Gramática</h3>
+
+<p>Explicações simples e exemplos práticos.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-language"></i>
+
+<h3>Vocabulário</h3>
+
+<p>Palavras essenciais organizadas por temas.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-pencil-alt"></i>
+
+<h3>Exercícios</h3>
+
+<p>Pratique e acompanhe a sua evolução.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-file-pdf"></i>
+
+<h3>PDFs</h3>
+
+<p>Materiais para estudar mesmo sem internet.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+PARCEIROS
+====================================== -->
+
+<section class="partners">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Parceiros</span>
+
+<h2>Construindo oportunidades juntos</h2>
+
+</div>
+
+<div class="partners-grid">
+
+<div class="partner-box">Parceiro 1</div>
+
+<div class="partner-box">Parceiro 2</div>
+
+<div class="partner-box">Parceiro 3</div>
+
+<div class="partner-box">Parceiro 4</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+DEPOIMENTOS
+====================================== -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Depoimentos</span>
+
+<h2>O que dizem os nossos estudantes</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<p>
+
+"A SpeakUp Academy ajudou-me a ganhar confiança para comunicar em inglês."
+
+</p>
+
+<h3>— Estudante</h3>
+
+</div>
+
+<div class="card">
+
+<p>
+
+"O teste de proficiência mostrou exatamente o nível em que eu estava."
+
+</p>
+
+<h3>— Utilizador do PP</h3>
+
+</div>
+
+<div class="card">
+
+<p>
+
+"Os materiais gratuitos são excelentes e muito fáceis de compreender."
+
+</p>
+
+<h3>— Aluno</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+PERGUNTAS FREQUENTES
+====================================== -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>FAQ</span>
+
+<h2>Perguntas Frequentes</h2>
+
+</div>
+
+<div class="faq-item">
+
+<h3>O teste é gratuito?</h3>
+
+<p>Sim. O Proficiency Project pode ser realizado gratuitamente.</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Recebo certificado?</h3>
+
+<p>Os certificados serão disponibilizados numa versão futura da plataforma.</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Posso estudar online?</h3>
+
+<p>Sim. A SpeakUp Academy oferecerá cursos presenciais e online.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== FIM DA PARTE 3 ===== -->
+  <!-- =====================================
+CONTACTOS
+====================================== -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Contacte-nos</span>
+
+<h2>Estamos prontos para ajudá-lo</h2>
+
+<p>
+Entre em contacto para esclarecer dúvidas, conhecer os nossos cursos ou obter mais informações.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<i class="fas fa-phone"></i>
+
+<h3>Telefone</h3>
+
+<p>+258 87 183 1693</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>speakupacademy@gmail.com</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fas fa-map-marker-alt"></i>
+
+<h3>Localização</h3>
+
+<p>Maputo, Moçambique</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fab fa-whatsapp"></i>
+
+<h3>WhatsApp</h3>
+
+<p>Disponível para atendimento</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+CALL TO ACTION
+====================================== -->
+
+<section class="final-cta">
+
+<div class="container">
+
+<h2>Pronto para transformar o seu inglês?</h2>
+
+<p>
+
+Faça gratuitamente o Proficiency Project e descubra o seu nível em poucos minutos.
+
+</p>
+
+<a href="proficiency.html" class="btn-primary">
+
+Começar Agora
+
+</a>
+
+</div>
+
+</section>
+
+<!-- =====================================
+FOOTER
+====================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<img src="images/logo-white.png" alt="SpeakUp Academy" class="footer-logo">
+
+<p>
+
+Aprenda inglês. Transforme a sua vida.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Academia</h3>
+
+<ul>
+
+<li><a href="#about">Sobre</a></li>
+
+<li><a href="#courses">Cursos</a></li>
+
+<li><a href="#library">Biblioteca</a></li>
+
+<li><a href="proficiency.html">Proficiency Project</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Contacto</h3>
+
+<p>📞 +258 87 183 1693</p>
+
+<p>📧 speakupacademy@gmail.com</p>
+
+<p>📍 Maputo - Moçambique</p>
+
+</div>
+
+<div>
+
+<h3>Siga-nos</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 SpeakUp Academy. Todos os direitos reservados.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script src="js/script.js"></script>
+
+<script src="js/language.js"></script>
+
+</body>
+
+</html>
