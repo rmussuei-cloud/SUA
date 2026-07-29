@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Proficiency Project | SpeakUp Academy</title>
+
+<meta name="description" content="Faça gratuitamente o teste oficial de inglês da SpeakUp Academy e descubra o seu nível CEFR (A1-C2).">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+<!-- =====================================
+HEADER
+===================================== -->
+
+<header id="header">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.png" alt="SpeakUp Academy">
+
+</a>
+
+</div>
+
+<nav id="menu">
+
+<ul>
+
+<li><a href="index.html">Início</a></li>
+
+<li><a href="index.html#courses">Cursos</a></li>
+
+<li><a href="index.html#library">Biblioteca</a></li>
+
+<li><a href="proficiency.html" class="active">Proficiency Project</a></li>
+
+<li><a href="index.html#contact">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<a href="index.html" class="btn-header">
+
+<i class="fas fa-arrow-left"></i>
+Voltar
+
+</a>
+
+</div>
+
+</header>
+
+<!-- =====================================
+HERO
+===================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-left">
+
+<span class="tag">
+
+SpeakUp Academy
+
+</span>
+
+<h1>
+
+Proficiency
+<span>Project</span>
+
+</h1>
+
+<p>
+
+Descubra gratuitamente o seu nível de inglês através do teste oficial da SpeakUp Academy, baseado no Quadro Europeu Comum de Referência para as Línguas (CEFR).
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" id="start-test" class="btn-primary">
+
+<i class="fas fa-play-circle"></i>
+
+Começar Teste
+
+</a>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/hero-students.png" alt="Proficiency Project">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+INTRODUÇÃO
+===================================== -->
+
+<section class="about" id="intro">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Proficiency Project</span>
+
+<h2>Como funciona o teste?</h2>
+
+<p>
+
+O teste foi desenvolvido para avaliar a sua competência em inglês de forma rápida e objetiva. No final, receberá o seu nível estimado (A1 a C2) e uma recomendação do curso mais adequado da SpeakUp Academy.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- =====================================
+ÁREA DO TESTE
+===================================== -->
+
+<section id="test-section" class="test-section" style="display:none;">
+
+    <div class="container">
+
+        <div class="progress-area">
+
+            <div class="progress-top">
+                <span id="question-number">
+                    Pergunta 1 de 60
+                </span>
+
+                <span id="progress-percent">
+                    0%
+                </span>
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progress-fill"></div>
+
+            </div>
+
+        </div>
+
+        <div class="question-card">
+
+            <h2 id="question">
+
+                Loading...
+
+            </h2>
+
+            <div id="answers" class="answers">
+
+                <!-- As respostas serão inseridas pelo JavaScript -->
+
+            </div>
+
+            <div class="test-buttons">
+
+                <button id="next-btn" class="btn-primary">
+
+                    Próxima Pergunta
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+RESULTADO
+===================================== -->
+
+<section id="result-section" class="result-section" style="display:none;">
+
+    <div class="container">
+
+        <div class="result-card">
+
+            <h2>
+
+                Resultado do Proficiency Project
+
+            </h2>
+
+            <h1 id="level">
+
+                B1
+
+            </h1>
+
+            <p id="description">
+
+                O seu resultado aparecerá aqui.
+
+            </p>
+
+            <a href="index.html" class="btn-primary">
+
+                Voltar ao Início
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
