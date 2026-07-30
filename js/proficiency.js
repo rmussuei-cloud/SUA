@@ -1,7 +1,66 @@
-/* ===========================================
+/* ==========================================
    SPEAKUP ACADEMY
    PROFICIENCY PROJECT
-=========================================== */
+========================================== */
+
+let currentQuestion = 0;
+let score = 0;
+
+const totalQuestions = 40;
+
+let selectedAnswer = null;
+
+let timer;
+let timeLeft = 30 * 60;
+
+/* ==========================
+ELEMENTOS
+========================== */
+
+const startButton =
+document.getElementById("startTest");
+
+const instructionSection =
+document.getElementById("instructions");
+
+const testArea =
+document.getElementById("testArea");
+
+const resultArea =
+document.getElementById("resultArea");
+
+const timerElement =
+document.getElementById("time");
+
+const progress =
+document.getElementById("progress");
+
+const currentQuestionElement =
+document.getElementById("currentQuestion");
+
+const totalQuestionElement =
+document.getElementById("totalQuestions");
+
+totalQuestionElement.textContent = totalQuestions;
+
+/* ==========================
+INICIAR TESTE
+========================== */
+
+startButton.addEventListener("click", () => {
+
+instructionSection.style.display = "none";
+
+testArea.style.display = "block";
+
+startTimer();
+
+loadQuestion();
+
+});
+/* ==========================================
+PERGUNTAS
+========================================== */
 
 const questions = [
 
@@ -36,99 +95,136 @@ answers:[
 "I has lived here for five years."
 ],
 correct:0
+},
+
+{
+question:"Choose the correct sentence.",
+answers:[
+"They doesn't like coffee.",
+"They don't like coffee.",
+"They isn't like coffee.",
+"They not like coffee."
+],
+correct:1
+},
+
+{
+question:"Which word is an adjective?",
+answers:[
+"Quickly",
+"Beautiful",
+"Run",
+"Tomorrow"
+],
+correct:1
 }
 
 ];
 
-let currentQuestion = 0;
-let score = 0;
-
-const intro = document.getElementById("intro");
-const testSection = document.getElementById("test-section");
-const resultSection = document.getElementById("result-section");
-
-const question = document.getElementById("question");
-const answers = document.getElementById("answers");
-
-const nextBtn = document.getElementById("next-btn");
-
-const startBtn = document.getElementById("start-test");
-
-const progressFill = document.getElementById("progress-fill");
-const questionNumber = document.getElementById("question-number");
-const progressPercent = document.getElementById("progress-percent");
-
-let selectedAnswer = null;
-
-startBtn.onclick = function(e){
-
-e.preventDefault();
-
-intro.style.display="none";
-
-testSection.style.display="block";
-
-loadQuestion();
-
-};
+/* ==========================================
+MOSTRAR PERGUNTA
+========================================== */
 
 function loadQuestion(){
 
-selectedAnswer=null;
+selectedAnswer = null;
 
-const q=questions[currentQuestion];
+const q = questions[currentQuestion];
 
-question.innerHTML=q.question;
+document.getElementById("question").textContent = q.question;
 
-answers.innerHTML="";
+const answersContainer =
+document.getElementById("answers");
+
+answersContainer.innerHTML = "";
 
 q.answers.forEach((answer,index)=>{
 
-const button=document.createElement("button");
+const option = document.createElement("div");
 
-button.className="answer-btn";
+option.className = "answer";
 
-button.innerHTML=answer;
+option.textContent = answer;
 
-button.onclick=function(){
+option.addEventListener("click",()=>{
 
-document.querySelectorAll(".answer-btn").forEach(btn=>{
+document.querySelectorAll(".answer")
+.forEach(a=>a.classList.remove("selected"));
 
-btn.classList.remove("selected");
+option.classList.add("selected");
 
-});
-
-button.classList.add("selected");
-
-selectedAnswer=index;
-
-};
-
-answers.appendChild(button);
+selectedAnswer = index;
 
 });
 
-questionNumber.innerHTML=`Pergunta ${currentQuestion+1} de ${questions.length}`;
+answersContainer.appendChild(option);
 
-const percent=((currentQuestion)/questions.length)*100;
+});
 
-progressFill.style.width=percent+"%";
+currentQuestionElement.textContent = currentQuestion + 1;
 
-progressPercent.innerHTML=Math.round(percent)+"%";
+updateProgress();
+
+}
+/* ==========================================
+CRONÓMETRO
+========================================== */
+
+function startTimer(){
+
+timer = setInterval(()=>{
+
+timeLeft--;
+
+const minutes = Math.floor(timeLeft / 60);
+
+const seconds = timeLeft % 60;
+
+timerElement.textContent =
+`${String(minutes).padStart(2,"0")}:${String(seconds).padStart(2,"0")}`;
+
+if(timeLeft <= 0){
+
+clearInterval(timer);
+
+showResult();
 
 }
 
-nextBtn.onclick=function(){
+},1000);
 
-if(selectedAnswer===null){
+}
 
-alert("Selecione uma resposta.");
+/* ==========================================
+BARRA DE PROGRESSO
+========================================== */
+
+function updateProgress(){
+
+const percent =
+((currentQuestion + 1) / questions.length) * 100;
+
+progress.style.width = percent + "%";
+
+}
+
+/* ==========================================
+PRÓXIMA PERGUNTA
+========================================== */
+
+document
+.getElementById("nextBtn")
+.addEventListener("click",()=>{
+
+if(selectedAnswer === null){
+
+alert("Selecione uma resposta antes de continuar.");
 
 return;
 
 }
 
-if(selectedAnswer===questions[currentQuestion].correct){
+if(selectedAnswer === questions[currentQuestion].correct){
 
 score++;
 
@@ -136,34 +232,91 @@ score++;
 
 currentQuestion++;
 
-if(currentQuestion<questions.length){
+if(currentQuestion < questions.length){
 
 loadQuestion();
 
 }else{
 
+clearInterval(timer);
+
 showResult();
 
 }
 
-};
+});
+/* ==========================================
+RESULTADO FINAL
+========================================== */
 
 function showResult(){
 
-testSection.style.display="none";
+resultArea.style.display = "block";
 
-resultSection.style.display="block";
+testArea.style.display = "none";
 
-let level="A1";
+let percentage =
+Math.round((score / questions.length) * 100);
 
-if(score>=1) level="A2";
-if(score>=2) level="B1";
-if(score>=3) level="B2";
+let level = "";
+let description = "";
+let recommendation = "";
 
-document.getElementById("level").innerHTML=level;
+if(percentage < 25){
 
-document.getElementById("description").innerHTML=
+level = "A1";
+description = "Iniciante. Compreende expressões muito básicas e consegue comunicar em situações simples.";
+recommendation = "Curso A1 - Beginner";
 
-`Acertou ${score} de ${questions.length} perguntas.`;
+}else if(percentage < 40){
+
+level = "A2";
+description = "Elementar. Consegue compreender frases frequentes e comunicar em situações do dia a dia.";
+recommendation = "Curso A2 - Elementary";
+
+}else if(percentage < 60){
+
+level = "B1";
+description = "Intermédio. Consegue lidar com situações do quotidiano e compreender textos simples.";
+recommendation = "Curso B1 - Intermediate";
+
+}else if(percentage < 80){
+
+level = "B2";
+description = "Intermédio Superior. Comunica com confiança em ambientes académicos e profissionais.";
+recommendation = "Curso B2 - Upper Intermediate";
+
+}else if(percentage < 95){
+
+level = "C1";
+description = "Avançado. Utiliza o inglês de forma eficaz em contextos complexos.";
+recommendation = "Curso C1 - Advanced";
+
+}else{
+
+level = "C2";
+description = "Proficiência. Domina a língua inglesa praticamente ao nível de um falante altamente competente.";
+recommendation = "Curso C2 - Proficiency";
+
+}
+
+document.getElementById("level").textContent = level;
+
+document.getElementById("description").innerHTML = `
+<strong>${description}</strong>
+<br><br>
+Acertou <strong>${score}</strong> de <strong>${questions.length}</strong> perguntas.
+<br><br>
+Percentagem: <strong>${percentage}%</strong>
+<br><br>
+Curso recomendado:
+<strong>${recommendation}</strong>
+`;
+
+document.getElementById("score").textContent =
+`${score}/${questions.length}`;
+
+document.getElementById("percentage").textContent =
+`${percentage}%`;
 
 }
